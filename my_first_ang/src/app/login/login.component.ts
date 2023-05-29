@@ -13,5 +13,11 @@ export class LoginComponent {
     this.test = 'testing property';
     this.formTitle = 'Login Form'
   }
+  amount : number =5000;
+  text:string ='sahil'
 
+  title(){
+    return "LOG IN"
+  }
 }
+
