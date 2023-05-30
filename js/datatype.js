@@ -75,6 +75,7 @@ console.log(typeof(x1))
 
 
 //OBJECT DATATYPES
+//         1. Array []
 let colour = [ 'pink', 'green', 'white', 'yellow' ]; //array with four value: homo
 console.log(colour);
 let mycity = []  //empty array
@@ -87,5 +88,53 @@ let cars = [100 , 200 , 'swift' , 'piaggio']
 // to find the length of the object
 console.log(cars.length);
 
+let num3 = [ 1 , 2 ,3 , 4, 5] //homo items
+console.log(num3.length);
+let num4 = 6000 ;
+console.log(num4.length);  //length properties does not apply on number properties
 
+console.log(cars[3]);
+console.log(cars[0]);
+console.log(num3[2]);
+console.log(cars[cars.length-1]);
+
+
+let no = [10 , 20 ,true, 'good',10.5,] //hetero items
+
+
+//       2. Object {}
+EmpData = {
+    name :'sahil',
+    address : 'a/p khare karjune',
+    mob : 883322 ,
+    city : 'bombay'
+}
+console.log(EmpData);
+console.log(EmpData.city);
+console.log(EmpData.name);
+
+//multiple data [{}]
+MultEmpData =[
+    {
+        name :'sahil',
+    address : 'a/p khare karjune',
+    mob : 883322 ,
+    city : 'bombay'
+},
+    {
+        name : 'samar',
+        add : 'aabb',
+        mob : 112233,
+        city : 'nagar',
+    },
+    {
+        name : 'aj',
+        add : 'nimb',
+        mob : 888888,
+        city : 'a.nagar'
+    }
+
+
+]
+console.log(MultEmpData);
  
