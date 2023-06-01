@@ -47,3 +47,20 @@ console.log(txt2.substr(5,8));
 let txt3 = 'nagar i love nagar and nagar is a good city'
 let txt4 = txt3.replace(/nagar/g, 'ahmednagar');
 console.log(txt4);
+
+//6 . replace All
+let y = 'nagar i love nagar and nagar is a good city ,and nagar is a big dist in maharastra'
+z = y.replaceAll('nagar','pune')
+console.log(z);
+
+//to uppar case and to lower case
+
+let x1 = 'sahil SHIRAJ shaikh 112233'
+let x2 = x1.toUpperCase()
+console.log(x2);
+
+//trim
+let xnew = 'i love india';
+console.log(xnew);
+console.log(xnew.trim());
+console.log(xnew.trimStart());
