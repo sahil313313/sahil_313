@@ -26,6 +26,24 @@
 
     <p>{{amount}}</p>
     <h2>{{text}}</h2>
+    <h1>{{myName}}</h1>
+    <!-- one way -->
+    <!-- 1.interpolation -->
+    <h1>{{amount}}</h1>
+    <!-- property bind -->
+<input type="text" [value]="myName"><br><br>
+
+
+
+
+
+
+
+
+    <!-- two way databind -->
+    <input type="text" [(ngModel)]="myname1">
+    {{myname1}}
+
 
 </body>
 </html>
