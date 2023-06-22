@@ -1,0 +1,27 @@
+<p>reactive11 works!</p>
+
+<div>
+    <form [formGroup]="SignUpform">
+        <label >username</label><br>
+        <input type="text" formControlName = 'username'><br>
+        <span *ngIf="!SignUpform.get('username')?. valid &&
+         !SignUpform.get('username')?.touched && !SignUpform.get('username')?.dirty">
+            hint : enter your name
+        </span>
+        <span *ngIf="SignUpform.get('username')?.errors?.['required'] && 
+        SignUpform.get('username')?.touched &&
+        !SignUpform.get('username')?.valid">
+            name is required
+        </span>
+        <span *ngIf="SignUpform.get('username')?.errors?.['pattern']">
+            enter alphabates only
+
+        </span>
+        <span *ngIf="SignUpform.get('username')?.errors?.['minLength'] && !SignUpform.get('username')?.errors?.['pattern']">
+            min 8 char req
+        </span> <br><br>
+        <label >password</label><br> 
+        <input type="text" formControlName = 'password'><br><br>
+        <button [disabled]="!SignUpform.valid" (click)="submit()">submit</button><br>
+    </form>
+</div>

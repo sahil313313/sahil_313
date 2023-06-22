@@ -8,7 +8,7 @@
     <title>login form</title>
 </head>
 <body>
-    <link rel="stylesheet" href="login.component.css">
+    <!-- <link rel="stylesheet" href="login.component.css">
     <div class="login-form-container">
         <h2>{{title()}}</h2>
         <div>
@@ -22,7 +22,7 @@
             </form>
             <button (click) = "submit()">{{test}}</button>
         </div>
-     </div>
+     </div> -->
 
     <!-- <p>{{amount}}</p>
     <h2>{{text}}</h2>
@@ -37,14 +37,44 @@
 
 
 
-<button routerLink = 'login/LoginComponent'>click</button>
+<!-- <button routerLink = 'login/LoginComponent'>click</button> -->
 
 
     <!-- two way databind -->
-     <input type="text" [(ngModel)]="myname1">
-    {{myname1}}
-<button routerLink = '/'>home</button>
+     <!-- <input type="text" [(ngModel)]="myname1">
+    {{myname1}} -->
+<!-- <button routerLink = '/'>backTohome</button> -->
+<div class="main">
+    <h2 class="h2">MyFirstApp</h2>
+    <form #loginForm="ngForm">
+        <label  >UserName</label>&nbsp;<br>
+        <input type="text" class="inp" ngModel  name="UserName" #Username = 'ngModel' 
+        pattern="[a-zA-Z ]*$" minlength="5" maxlength="11"><br>
+        <span 
+        *ngIf = " Username.errors?.['pattern']  ">please enter alphabates only
+       </span>
+       <span *ngIf = "Username.errors?.['minlength'] && !Username.errors?.['pattern'] ">
+        min 5 character required
+       </span><br>
+        <label >Password</label><br>
+        <input type="text" class="inp"  name="password" ngModel #password="ngModel" pattern="[A-Z]{1}[a-zA-Z1-9#@$&*]{9}$" minlength="5" maxlength="10"><br>
+        <span *ngIf = "password.errors?.['minlength']">password should contain min 5 char</span>
+        <span *ngIf = "password.errors?.['pattern'] && !password.errors?.['minlength']">match the pattern</span><br>
+        <br>
+        <label >gender</label><br>
+        <input type="radio" required value="Male" name="gender" ngModel #male="ngModel">male <br>
+        <input type="radio" required value="Female" name="gender" ngModel #female="ngModel">female <br><br>
+        <button  (click) = "subbmit(loginForm.value)" [disabled]="!loginForm.valid">submit</button>
+    </form><br>
+
+    <button (click)="backToHome()">back</button>
+    
+</div>
+<button (click)="getdata()">getdata</button>
+
+ <!-- <input type="text" [(ngModel)] = "MyName"><br>
+ {{MyName}}
 
 </body>
-</html>
+</html> -->
 

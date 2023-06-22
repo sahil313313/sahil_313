@@ -1,0 +1,18 @@
+<p>new-rform works!</p>
+<button (click)=" ngOnInit()">show form</button><br><br>
+<div>
+    <form [formGroup]="confoform" *ngIf="showmeForm">
+        username : <input [type]="showpass1 ? 'text' : 'password'"  formControlName="username" (keyup)="password()" >
+        <button (click)="showpass()" >show</button><br>
+        <span *ngIf="confoform.get('username')?.dirty && !ismatch">
+            please match password
+        </span><br><br>
+        confousername : <input [type]="confopass ? 'text' :'password'" formControlName="confousername" (keyup)="conformpass()">
+        <button (click)="confopass1()">show</button><br>
+        <span *ngIf="confoform.get('confousername')?.dirty && !ismatch">
+            please match password
+        </span><br>
+        <button [disabled]="!confoform.valid" (click)="submit()">submit</button>
+    </form>
+</div><br><br>
+<button routerLink="/ ">back home</button>

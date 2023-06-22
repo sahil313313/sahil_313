@@ -9,3 +9,27 @@
     padding: 2px 2px;
     background-color: antiquewhite;
 }
+.main {
+    text-align: center;
+    width: 348px;
+    height: 360px;
+    background-color: aqua;
+    position: relative;
+    left: 250px;
+    top: 150px;
+}
+.h2{
+    color: brown;
+    text-align: center;
+    text-decoration: dotted;
+    font-style: italic;
+     
+    
+}
+ .inp{
+    padding: 5px;
+    margin-top: 10px;
+    width: 200px;
+ }
+
+

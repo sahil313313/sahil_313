@@ -1,0 +1,60 @@
+<button (click)="back()">backToHome</button>
+<!--  directives can be classified in 3 categories based on how they 
+    behave:
+
+1.Component Directives
+2.Structural Directives
+3.Attribute Directives
+
+Component Directives: Component directives are used in main class.
+They contain the detail of how the component should be processed,
+instantiated and used at runtime.
+
+Structural Directives: Structural directives start with a * sign. 
+These directives are used to manipulate and change the structure 
+of the DOM elements(show or hide).
+For example, *ngIf directive, *ngSwitch directive, and *ngFor directive. -->
+<!-- uses:
+*ngIf Directive: The ngIf allows us to Add/Remove DOM Element.
+*ngSwitch Directive: The *ngSwitch allows us to Add/Remove DOM Element.
+ It is similar to switch statement of C#.
+*ngFor Directive: The *ngFor directive is used to repeat a portion of
+ HTML template once per each item from an iterable list (Collection). 
+
+Attribute Directives: Attribute directives are used to change the look
+ and behavior of the DOM elements.
+  For example: ngClass directive, and ngStyle directive etc.
+1. ngClass Directive: The ngClass directive is used to add or remove CSS 
+classes to an HTML element.
+2. ngStyle Directive: The ngStyle directive facilitates you to modify the
+ style of an HTML element using the expression. You can also use 
+ ngStyle directive to dynamically change the style of your HTML element-->
+
+
+
+ <!-- In case of true value of propery compiler will
+     ADD that element to the DOM -->
+
+ <p *ngIf = 'cls'>1.Never Bow Down</p><br><br>
+
+
+ <!-- In case of false value of propery compiler will remove that element 
+    from DOM -->
+    <p *ngIf = 'cls1'>2.Never Bow Down</p>
+
+     <!--In case of undefined value of property it will consider it as
+         a false,
+        hence it should
+      removed from DOM-->
+      <p *ngIf ='cls2'>3.Never Bow Down</p>
+      <p *ngIf ='undefinedCls'>4..Never Bow Down</p>
+
+    <!-- In case of property having NULL value compiler will consider
+             it as a false,hence it should
+             removed from DOM-->
+    <p *ngIf='cls3'>3.Never Bow Down</p>
+
+
+
+    <p *ngIf ='toggel'>Never Bow Down</p>
+
