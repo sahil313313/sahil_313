@@ -1,3 +1,8 @@
 <p>child works!</p>
 
-<input type="text" [(ngModel)]="dataFronPar" >{{dataFronPar}}
+ <input type="text" [(ngModel)]="datafrompars2">
+  <br><br>
+
+  sirName  :<input type="text"  [(ngModel)]="dataforpar">
+
+  datafromchild : <input  type="text" (keyup)="forParent($event)">

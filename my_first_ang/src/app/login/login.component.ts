@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { GetdataService } from '../reactive/getdata.service';
+import { FirstSirviceService } from '../first-sirvice.service';
 
 @Component({
   selector: 'app-login',
@@ -8,8 +9,19 @@ import { GetdataService } from '../reactive/getdata.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  "data" :[
+    {
+      name : 'sahil',
+      age : 24;
+      no : 9898989898;
+    }
+    ]
+    "city" : "nagar";
+
+
   constructor(private router:Router,
-              private getdd:GetdataService){}
+              private getdd:GetdataService,
+                ){}
   formTitle = '--LOGIN FORM--';
   test:string= 'click';
   getddd : any;
@@ -42,6 +54,8 @@ this.getddd = this.getdd.getData
 console.log(this.getddd);
 
 }
+
+
   //data binding 
 //.1. one way    2. two way
 
@@ -66,6 +80,13 @@ myName = 'sahil';
 //2 . two way datat binding [()]
 myname1 = 'sahil';
 MyName = "sahil123";
+
+ngOnInit(){
+this.getdd.dataFromLog=this.data.values
+}
+ 
+
+
 }
 
 

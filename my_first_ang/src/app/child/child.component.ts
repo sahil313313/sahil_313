@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -7,7 +7,14 @@ import { Component, Input } from '@angular/core';
 })
 export class ChildComponent {
    
+@Input() datafrompars2 :any;
+@Input() dataforpar :any;
+@Output() dataToPar = new EventEmitter <any>;
 
-  @Input() dataFronPar : any;
 
+
+forParent(data:any){
+let data1=data.target.value;
+this.dataToPar.emit(data1)
+}
 }

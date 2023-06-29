@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class FirstSirviceService {
 Sservice : any;
 stddata : any ;
+datafromlog:any;
   constructor() { }
   multiply(a : any ,b :any){
     return a * b

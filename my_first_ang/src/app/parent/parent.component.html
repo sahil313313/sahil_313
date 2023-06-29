@@ -1,6 +1,14 @@
 <p>parent works!</p>
-<input type="text" [(ngModel)]="parData">{{parData}}
+ 
+<input type="text"[(ngModel)]='s1dataFromPar'><br><br>{{s1dataFromPar}}
 
----------------------- <br>
 
-<app-child [dataFronPar]="parData"></app-child>
+
+
+<br><br>{{dataFromChild}}
+---------------------------- <br>
+
+<app-child [datafrompars2]="s1dataFromPar" [dataforpar]="s1dataFromPar"  (dataToPar)="getData($event)"></app-child>
+
+
+
